@@ -21,6 +21,7 @@ public class Program
             opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
         builder.Services.AddScoped<IPatientService, PatientService>();
+        builder.Services.AddScoped<IPrescriptionService, PrescriptionService>();
         
         var app = builder.Build();
 
